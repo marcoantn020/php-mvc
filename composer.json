@@ -1,0 +1,22 @@
+{
+    "name": "marco/mvc-002",
+    "authors": [
+        {
+            "name": "Marco",
+            "email": "mail@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "filp/whoops": "^2.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        },
+        "files": [
+            "app/helpers/exceptions.php",
+            "app/helpers/constants.php"
+        ]
+    }
+}

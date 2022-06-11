@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  dbudemyMVC:
+    image: mysql:5.7
+    container_name: dbudemyMVC
+    ports:
+     - "3306:3306"
+    environment:
+      MYSQL_DATABASE: 'dev'
+      MYSQL_ROOT_PASSWORD: 'root'
+    volumes:
+      - MVCVolume:/var/lib/mysql
+      - MVCConfig:/etc/mysql
+
+volumes:
+  MVCVolume:
+  MVCConfig:
