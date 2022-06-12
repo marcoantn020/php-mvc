@@ -1,3 +1,6 @@
+<p>
+<?php echo flashMessage('created');?>
+</p>
 <h1>Lista de usuarios <?php echo count($users); ?></h1>
 
 <ul>

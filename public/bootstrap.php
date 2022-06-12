@@ -7,7 +7,6 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->allowQuit(false);
 $whoops->writeToOutput(false);
-$whoops->register();
 
 use app\core\AppExtract;
 use app\core\MyApp;

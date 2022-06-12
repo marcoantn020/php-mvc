@@ -38,13 +38,7 @@ class LoginController implements ControllerInterface
             FlashMessage::set("login", "Usuario ou senha inválidos!");
             return redirect("/login");
         }
-        // $passwordMatch = password_verify($password, $userFound->password);
-        // if (!$passwordMatch) {
-            //     FlashMessage::set("login", "Usuario ou senha inválidos!");
-            //     return redirect("/login");
-            // }
-            
-        $passwordMatch = $password == $userFound->password;
+        $passwordMatch = password_verify($password, $userFound->password);
         if (!$passwordMatch) {
             FlashMessage::set("login", "Usuario ou senha inválidos!");
             return redirect("/login");
