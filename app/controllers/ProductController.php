@@ -9,7 +9,10 @@ class ProductController
     
     public function index (array $args)
     {
-        
+        $this->view = 'edit.php';
+        $this->data = [
+            'title' => 'index'
+        ];
     }
 
     public function show ()

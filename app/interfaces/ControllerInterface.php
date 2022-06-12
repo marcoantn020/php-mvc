@@ -4,7 +4,10 @@ namespace app\interfaces;
 
 interface ControllerInterface
 {
-    public function controller ():string;
-    public function method ($controller):string;
-    public function params ():array;
+    public function index (array $args);
+    public function show (array $args);
+    public function edit (array $args);
+    public function update (array $args);
+    public function store ();
+    public function destroy (array $args);
 }

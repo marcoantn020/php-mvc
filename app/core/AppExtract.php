@@ -2,9 +2,9 @@
 
 namespace app\core;
 
-use app\interfaces\ControllerInterface;
+use app\interfaces\AppInterface;
 
-class AppExtract implements ControllerInterface
+class AppExtract implements AppInterface
 {
     private int $sliceIndexStartFrom;
 
@@ -22,9 +22,6 @@ class AppExtract implements ControllerInterface
 
     public function params ():array
     {
-        $uri = Uri::uri();
-        $countUri = count($uri);
-        $this->params = array_slice($uri, $this->sliceIndexStartFrom, $countUri);
-        return $this->params;
+       return ParamsExtract::extract($this->sliceIndexStartFrom);
     }
 }

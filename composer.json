@@ -16,7 +16,10 @@
         },
         "files": [
             "app/helpers/exceptions.php",
-            "app/helpers/constants.php"
+            "app/helpers/constants.php",
+            "app/helpers/flashMessage.php",
+            "app/helpers/redirect.php",
+            "app/helpers/session.php"
         ]
     }
 }

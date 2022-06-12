@@ -2,7 +2,7 @@
 
 namespace app\core;
 
-use app\interfaces\ControllerInterface;
+use app\interfaces\AppInterface;
 use Exception;
 
 class MyApp
@@ -10,7 +10,7 @@ class MyApp
     private $controller;
     private $controllerInterface;
     
-    public function __construct (ControllerInterface $c)
+    public function __construct (AppInterface $c)
     {
         $this->controllerInterface = $c;
     }
