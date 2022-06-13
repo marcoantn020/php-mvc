@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace app\controllers\site;
 
 use app\interfaces\ControllerInterface;
 use app\models\activerecord\FindBy;
@@ -14,11 +14,12 @@ class SignupController implements ControllerInterface
 {
     public string $view;
     public array $data = [];
+    public string $master = 'site/index.php';
 
     public function index (array $args) 
     {
 
-        $this->view = 'signup/index.php';
+        $this->view = 'site/signup/index.php';
         $this->data = [
             'title' => 'Signup'
         ];

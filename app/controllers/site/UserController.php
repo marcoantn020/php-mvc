@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace app\controllers\site;
 
 use app\models\activerecord\FindBy;
 use app\models\User;
@@ -10,6 +10,7 @@ class UserController
 {
     public array $data  = [];
     public string $view;
+    public string $master = 'site/index.php';
 
     public function show (array $args)
     {
@@ -17,7 +18,7 @@ class UserController
         if (!$user) {
             throw new Exception("Usuario não encontrado");
         }
-        $this->view = 'user/show.php';
+        $this->view = 'site/user/show.php';
         $this->data = [
             'title' => 'show',
             'user' => $user

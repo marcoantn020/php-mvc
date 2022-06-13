@@ -1,11 +1,12 @@
 <?php
 
-namespace app\controllers;
+namespace app\controllers\site;
 
 class ProductController
 {
     public array $data = [];
     public string $view;
+    public string $master = 'site/index.php';
     
     public function index (array $args)
     {

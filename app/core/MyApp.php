@@ -34,8 +34,9 @@ class MyApp
             if (!array_key_exists('title', $this->controller->data)) {
                 throw new Exception("A propriedade title é obrigatorio em data");
             }
+            
             extract($this->controller->data);
-            require "../app/views/index.php";
+            require "../app/views/". $this->controller->master;
         }
     }
 }

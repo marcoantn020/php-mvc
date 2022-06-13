@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace app\controllers\site;
 
 use app\interfaces\ControllerInterface;
 use app\models\activerecord\FindBy;
@@ -13,6 +13,7 @@ class LoginController implements ControllerInterface
 {
     public array $data = [];
     public string $view;
+    public string $master = 'site/index.php';
 
     public function __construct ()
     {
@@ -21,7 +22,7 @@ class LoginController implements ControllerInterface
 
     public function index (array $args)
     {
-        $this->view = 'login/index.php';
+        $this->view = 'site/login/index.php';
         $this->data = [
             'title' => 'Login'
         ];
